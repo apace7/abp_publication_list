@@ -100,5 +100,5 @@ with open('latex/nth_contributions.tex', 'w') as file:
 with open('latex/arxiv_input.tex', 'w') as file:
     file.writelines(arXiv)
 
-with open('latex/published.tex', 'w') as file:
-    file.writelines(published)
+# with open('latex/published.tex', 'w') as file:
+#     file.writelines(published)
