@@ -1,3 +1,16 @@
+
+pub_list_info_Sheet1.csv
+.DS_Store
+
+latex/nth_contributions.tex
+latex/publication_list.aux
+latex/publication_list.dvi
+latex/publication_list.out
+latex/publication_list.pdf
+latex/published.tex
+latex/arxiv_input.tex
+latex/major_contributions.tex
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

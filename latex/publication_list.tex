@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=1.0in,top=0.6in,right=1.0in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+% \title{List of Publications} % Your name
+% \name{\href{https://ui.adsabs.harvard.edu/public-libraries/hJ77Di5nQ0qwHYNpG0yRpA}{List of Publications}}
+%\address{List of Publications}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{List of Publications} \itemsep -3pt
+\end{rSection}
+
+% \item \href{https://ui.adsabs.harvard.edu/public-libraries/hJ77Di5nQ0qwHYNpG0yRpA}{ADS Library of {\bf Andrew B. Pace}}
+
+% \begin{rSection}{First Author \& Major Contribution}
+
+% \item \href{https://ui.adsabs.harvard.edu/public-libraries/hJ77Di5nQ0qwHYNpG0yRpA}{ADS Library of {\bf Andrew B. Pace}}
+
+
+
+% \end{rSection}
+
+\href{https://ui.adsabs.harvard.edu/public-libraries/hJ77Di5nQ0qwHYNpG0yRpA}{Link to ADS Library of {\bf Andrew B. Pace}}. Student led publications are underlined.
+
+\begin{rSection}{Refereed Journal Publications}
+% \itemsep -3pt
+
+
+{\bf First Author \& Major Contributions:}
+
+\input{major_contributions}
+
+{\bf n-th Author:}
+
+\input{nth_contributions}
+
+\end{rSection}
+
+\begin{rSection}{Submitted \& White Papers} \itemsep -3pt
+
+\input{arxiv_input}
+
+\end{rSection}
+
+\end{document}
+
