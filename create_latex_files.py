@@ -26,13 +26,14 @@ query2 = ads.SearchQuery(
     sort="pubdate",
 )
 papers2 = list(query2)
-
-my_name = ['Pace, A. B.', 'Pace, Andrew B.', 'Pace, Andrew', 'Pace, A.']
+print()
+my_name = ['Pace, A. B.', 'Pace, Andrew B.', 'Pace, Andrew', 'Pace, A.', 'Pace, Andrew B']
 pub_info = table.Table.read('pub_list_info_Sheet1.csv')
 
 major_contribution_pub = pub_info[pub_info['major_contributions']==1]
 student_lead = pub_info[pub_info['student_lead']==1]
-print(len(major_contribution_pub), len(student_lead))
+print("major contributions, student led:", len(major_contribution_pub), len(student_lead))
+print("total", len(pub_info))
 
 arXiv = []
 published = []
@@ -99,6 +100,8 @@ with open('latex/nth_contributions.tex', 'w') as file:
 
 with open('latex/arxiv_input.tex', 'w') as file:
     file.writelines(arXiv)
+
+print("arXiv, published, major, nth:", len(arXiv), len(published), len(major_contributions), len(nth_contributions))
 
 # with open('latex/published.tex', 'w') as file:
 #     file.writelines(published)
