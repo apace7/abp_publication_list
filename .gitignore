@@ -10,6 +10,8 @@ latex/publication_list.pdf
 latex/published.tex
 latex/arxiv_input.tex
 latex/major_contributions.tex
+latex/extra_stat.tex
+latex/first_author.tex
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
