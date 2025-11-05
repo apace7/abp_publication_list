@@ -88,9 +88,11 @@ for i in range(len(papers2)):
 #     a = unicode_to_latex(a)
 #     print(title)
     final_str = "\\item " + author_list+str(papers2[i].year)+", "+str(papers2[i].pub)+", "+volume+ ", "+str(papers2[i].page[0])+", "+title + xf
-    if papers2[i].citation_count > 100 or papers2[i].bibcode in first_author_info['bibcode']:
-        temp = " ({\\bf "+ str(papers2[i].citation_count) + " citations} on NASA ADS)"
+    # if papers2[i].citation_count > 100 or papers2[i].bibcode in first_author_info['bibcode']:
+    if papers2[i].citation_count > 0:
+        temp = " [{\\bf "+ str(papers2[i].citation_count) + " citations} on NASA ADS]"
         final_str += temp
+    final_str += "\n"
     if papers2[i].bibcode in first_author_info['bibcode']:
         first_author.append(final_str)
     elif str(papers2[i].pub) == "arXiv e-prints":
@@ -121,7 +123,10 @@ h_index = compute_h_index(cit)
 total_citations = np.sum(cit)
 total_papers = len(papers2)
 
-extra_stat = str(len(published)) + " total publications; " + str(len(first_author)) + " first author publications; " + str(len(major_contributions)) + " student led and/or major contribution publications; " + str(len(nth_contributions)) + " nth author or builder publications; " + str(len(arXiv)) + " submitted or white papers; h-index $=$ "  + str(h_index)
+extra_stat = [str(len(published) + len(first_author)) + " total publications; " + str(len(first_author)) + " first author publications; " + str(len(major_contributions)) + " student led and/or major contribution publications; " + str(len(nth_contributions)) + " nth author or builder publications; " + str(len(arXiv)) + " submitted or white papers.\n"]
+extra_stat.append("\n")
+extra_stat.append("Total citations: " + str(np.sum(cit)) + "\n\nh-index: "+str(h_index)+"\n")
+
 
 with open('latex/extra_stat.tex', 'w') as file:
     file.writelines(extra_stat)
