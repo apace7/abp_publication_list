@@ -31,7 +31,8 @@ query2 = ads.SearchQuery(
 papers2 = list(query2)
 print()
 my_name = ['Pace, A. B.', 'Pace, Andrew B.', 'Pace, Andrew', 'Pace, A.', 'Pace, Andrew B']
-pub_info = table.Table.read('pub_list_info_Sheet1.csv')
+# pub_info = table.Table.read('pub_list_info_Sheet1.csv')
+pub_info = table.Table.read('publication_list_info - Sheet1.csv')
 
 first_author_info = pub_info[pub_info['first_author']==1]
 major_contribution_pub = pub_info[pub_info['major_contributions']==1]
@@ -123,7 +124,7 @@ h_index = compute_h_index(cit)
 total_citations = np.sum(cit)
 total_papers = len(papers2)
 
-extra_stat = [str(len(published) + len(first_author)) + " total publications; " + str(len(first_author)) + " first author publications; " + str(len(major_contributions)) + " student led and/or major contribution publications; " + str(len(nth_contributions)) + " nth author or builder publications; " + str(len(arXiv)) + " submitted or white papers.\n"]
+extra_stat = [str(len(published) + len(first_author)) + " total refereed publications; " + str(len(first_author)) + " first author publications; " + str(len(major_contributions)) + " major contribution publications including student mentorship; " + str(len(nth_contributions)) + " nth author or builder publications; " + str(len(arXiv)) + " submitted or white papers.\n"]
 extra_stat.append("\n")
 extra_stat.append("Total citations: " + str(np.sum(cit)) + "\n\nh-index: "+str(h_index)+"\n")
 
