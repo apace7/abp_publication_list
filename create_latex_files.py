@@ -71,6 +71,11 @@ for i in range(len(papers2)):
     volume = papers2[i].volume
     if volume == None:
         volume = ""
+    # page_temp = papers2[i].page[0]
+    if papers2[i].page == None:
+        page_temp = ""
+    else:
+        page_temp = papers2[i].page[0]
     x = "; \\href{https://ui.adsabs.harvard.edu/abs/"
     x2 = "/abstract}{ADS link}"
     xf = x + str(papers2[i].bibcode) + x2
@@ -88,7 +93,7 @@ for i in range(len(papers2)):
     
 #     a = unicode_to_latex(a)
 #     print(title)
-    final_str = "\\item " + author_list+str(papers2[i].year)+", "+str(papers2[i].pub)+", "+volume+ ", "+str(papers2[i].page[0])+", "+title + xf
+    final_str = "\\item " + author_list+str(papers2[i].year)+", "+str(papers2[i].pub)+", "+volume+ ", "+page_temp+", "+title + xf
     # if papers2[i].citation_count > 100 or papers2[i].bibcode in first_author_info['bibcode']:
     if papers2[i].citation_count > 0:
         temp = " [{\\bf "+ str(papers2[i].citation_count) + " citations} on NASA ADS]"
