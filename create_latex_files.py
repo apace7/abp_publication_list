@@ -129,10 +129,11 @@ h_index = compute_h_index(cit)
 total_citations = np.sum(cit)
 total_papers = len(papers2)
 
-extra_stat = [str(len(published) + len(first_author)) + " total refereed publications; " + str(len(first_author)) + " first author publications; " + str(len(major_contributions)) + " major contribution publications including student mentorship; " + str(len(nth_contributions)) + " nth author or builder publications; " + str(len(arXiv)) + " submitted or white papers.\n"]
-extra_stat.append("\n")
-extra_stat.append("Total citations: " + str(np.sum(cit)) + "\n\nh-index: "+str(h_index)+"\n")
-
+# extra_stat = [str(len(published) + len(first_author)) + " total refereed publications; " + str(len(first_author)) + " first author publications; " + str(len(major_contributions)) + " major contribution publications including student mentorship; " + str(len(nth_contributions)) + " nth author or builder publications; " + str(len(arXiv)) + " submitted or white papers.\n"]
+# extra_stat.append("\n")
+# extra_stat.append("Total citations: " + str(np.sum(cit)) + "\n\nh-index: "+str(h_index)+"\n")
+extra_stat = []
+extra_stat.append("\\noindent Refereed: " + str(len(published) + len(first_author))+" -- " + "First Author: " + str(len(first_author)) + " -- " + "Publications with major contributions and/or student-led:  " + str(len(major_contributions)) + " -- " + "Builder and nth author: " + str(len(nth_contributions)) + " -- Submmitted or white papers: " + str(len(arXiv)) + " -- Total citations: " + str(np.sum(cit)) + " -- h-index: " + str(h_index) + " (as of \\today )" )
 
 with open('latex/extra_stat.tex', 'w') as file:
     file.writelines(extra_stat)

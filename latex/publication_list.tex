@@ -1,88 +1,80 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-% LaTeX Template
-% Version 2.0 (8/5/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
-%
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\documentclass[14pt]{article}
+\usepackage{enumerate}
+\usepackage[hmargin=2cm,vmargin=2cm]{geometry}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{url}
+\usepackage{etaremune}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{sectsty}
+\usepackage{cmtt}
 
-\documentclass{resume} % Use the custom resume.cls style
+\usepackage[T1]{fontenc}
 
-\usepackage[left=1.0in,top=0.6in,right=1.0in,bottom=0.6in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-% \title{List of Publications} % Your name
-% \name{\href{https://ui.adsabs.harvard.edu/public-libraries/hJ77Di5nQ0qwHYNpG0yRpA}{List of Publications}}
-%\address{List of Publications}
 
-\usepackage{hyperref}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Andrew B. Pace}
+\chead{Publications List}
+\rhead{\thepage}
+\thispagestyle{empty}
+%sectionfont{\color{}}
+
+\fancyfoot[C]{\textit{Last updated: \today}}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{List of Publications} \itemsep -3pt
-\end{rSection}
-
-% \item \href{https://ui.adsabs.harvard.edu/public-libraries/hJ77Di5nQ0qwHYNpG0yRpA}{ADS Library of {\bf Andrew B. Pace}}
-
-% \begin{rSection}{First Author \& Major Contribution}
 
 % \item \href{https://ui.adsabs.harvard.edu/public-libraries/hJ77Di5nQ0qwHYNpG0yRpA}{ADS Library of {\bf Andrew B. Pace}}
 
 
-
-% \end{rSection}
-
-\href{https://ui.adsabs.harvard.edu/public-libraries/hJ77Di5nQ0qwHYNpG0yRpA}{Link to ADS Library of {\bf Andrew B. Pace}}. Student led publications are underlined.
-
-\input{extra_stat}
-
-\begin{rSection}{Refereed Journal Publications}
-% \itemsep -3pt
+\begin{center}
+\indent \textbf{\LARGE Andrew B. Pace -- Publication List} \\
+\indent \rule{17cm}{0.4pt}\\
+\end{center}
 
 
-\begin{rSection}{First Author}
+\noindent \href{https://scixplorer.org/search?p=1&q=docs%28library%2FhJ77Di5nQ0qwHYNpG0yRpA%29&sort=date+desc&d=astrophysics}{Link to ADS/SciX Library of {\bf Andrew B. Pace}} 
 
+
+
+\par \input{extra_stat}
+
+
+\section*{Refereed Journal Publications}
+
+\subsection*{First Author}
+
+\begin{etaremune}
 \input{first_author}
+\end{etaremune}
 
-\end{rSection}
 
-\begin{rSection}{Major Contributions including Student-Mentored Papers}
+\subsection*{Major Contributions \& Student-Led Papers}
+Student-led publications are underlined.
 
+
+\begin{etaremune}
 \input{major_contributions}
+\end{etaremune}
 
-\end{rSection}
 
-\begin{rSection}{n-th Author \& Builder}
+\subsection*{n-th Author \& Builder}
 
+
+\begin{etaremune}
 \input{nth_contributions}
+\end{etaremune}
 
-\end{rSection}
+\section*{Submitted \& White Papers}
 
-\end{rSection}
 
-\begin{rSection}{Submitted \& White Papers} \itemsep -3pt
-
+\begin{etaremune}
 \input{arxiv_input}
+\end{etaremune}
 
-\end{rSection}
 
 \end{document}
 
