@@ -87,8 +87,12 @@ for i in range(len(papers2)):
     title = unicode_to_latex(title)
 #     print(title)
     
+    special_titles= ['2026PhRvD.114d3527A', '2026PhRvD.113h1303G']
     
 #     title = title.replace("\alpha", "$\\alpha$")
+    if papers2[i].bibcode in special_titles:
+        temp_info = pub_info[pub_info['bibcode']==papers2[i].bibcode][0]
+        title =temp_info['title']
     title = "{\\it "+title +"}"
     
 #     a = unicode_to_latex(a)
